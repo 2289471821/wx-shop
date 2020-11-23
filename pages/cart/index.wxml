@@ -1,6 +1,19 @@
 <!-- 收货地址 -->
 <view class="revice_address">
-  <view class="address_btn">
+  <!-- 收货地址不存在时，显示按钮 -->
+  <view class="address_btn" wx:if="{{!address.userName}}">
     <button bind:tap="handleChooseAddress" type="primary" plain="{{true}}">获取收货地址</button>
   </view>
+
+  <!-- 收货地址存在时，显示地址信息 -->
+  <view wx:else class="user_info_row">
+    <view class="user_info">
+      <view>{{address.userName}}</view>
+      <view>{{address.detailAddress}}</view>
+    </view>
+    <view class="user_phone">{{address.telNumber}}</view>
+  </view>
 </view>
+
+<!-- 购物车内容 -->
+

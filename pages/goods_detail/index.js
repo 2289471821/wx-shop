@@ -70,6 +70,7 @@ Page({
     if(index === -1) {
       // 不存在 将商品添加到购物车数组中
       this.GoodsInfo.num = 1
+      this.GoodsInfo.checked = true
       cart.push(this.GoodsInfo)
     }else {
       // 已经存在 修改商品数据

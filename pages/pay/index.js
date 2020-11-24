@@ -1,66 +1,44 @@
-// pages/pay/index.js
+import { getSetting, chooseAddress, openSetting, showModal, showToast } from "../../utils/asyncWx.js"
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+    address: {},
+    cart: [],
+    totalPrice: 0,
+    totalNumber: 0
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    // 获取缓存中的地址数据
+    const address = wx.getStorageSync("address")
+    // 获取缓存中的购物车数据
+    let cart = wx.getStorageSync("cart") || []
+    // 过滤后的购物车数据
+    cart = cart.filter(v => v.checked)
 
+    let totalPrice = 0, totalNumber = 0
+    cart.forEach(v => {
+      totalPrice += v.num * v.goods_price
+      totalNumber += v.num
+    })
+    this.setData({ address, cart, totalPrice, totalNumber })
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // 点击支付
+  handleOrderPay() {
+    // 判断缓存中有没有token
+    const token = wx.getStorageSync("token")
+    // 不存在token
+    if(!token) {
+      wx.navigateTo({
+        url: '/pages/auth/index'
+      })
+      return
+    }
+    // 存在token
+    
   }
 })

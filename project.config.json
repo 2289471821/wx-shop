@@ -66,20 +66,33 @@
           "scene": null
         },
         {
-          "name": "商品列表",
+          "name": "商品列表页面",
           "pathName": "pages/goods_list/index",
           "query": "cid=5",
           "scene": null
         },
         {
-          "name": "商品详情",
+          "name": "商品详情页面",
           "pathName": "pages/goods_detail/index",
           "query": "goods_id=43986",
           "scene": null
         },
         {
-          "name": "购物车",
+          "name": "购物车页面",
           "pathName": "pages/cart/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "支付页面",
+          "pathName": "pages/pay/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "授权页面",
+          "pathName": "pages/auth/index",
+          "query": "",
           "scene": null
         }
       ]

@@ -95,6 +95,18 @@
           "pathName": "pages/auth/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "个人中心页面",
+          "pathName": "pages/user/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "订单查询页面",
+          "pathName": "pages/order/index",
+          "query": "type=1",
+          "scene": null
         }
       ]
     }

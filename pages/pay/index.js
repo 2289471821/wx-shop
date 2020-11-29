@@ -42,7 +42,7 @@ Page({
       }
       // 存在token，创建订单
       // 准备请求头参数 authorization: token
-      const header = { Authorization: token }
+      // const header = { Authorization: token }
       // 准备请求体参数 order_price（订单总价格），consignee_addr（收货地址），goods（订单数组）
       const order_price = this.data.totalPrice
       const consignee_addr = this.data.address.all
@@ -56,10 +56,10 @@ Page({
       const orderParams = { order_price, consignee_addr, goods }
 
       // 发送请求，获取订单编号
-      const result = await request({ url: '/my/orders/create', method: 'POST', data: orderParams, header })
+      const result = await request({ url: '/my/orders/create', method: 'POST', data: orderParams })
       const { order_number } = result.data.message
       // 发起请求，获取预支付接口数据
-      const res = await request({ url: '/my/orders/req_unifiedorder', method: 'POST', data: {order_number}, header})
+      const res = await request({ url: '/my/orders/req_unifiedorder', method: 'POST', data: {order_number} })
       const { pay } = res.data.message
       
       // 发起微信支付

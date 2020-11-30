@@ -107,6 +107,11 @@
           "pathName": "pages/order/index",
           "query": "type=1",
           "scene": null
+        },
+        {
+          "name": "商品收藏页面",
+          "pathName": "pages/collect/index",
+          "scene": null
         }
       ]
     }

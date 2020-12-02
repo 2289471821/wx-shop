@@ -65,10 +65,10 @@ Page({
       // 发起微信支付
       await requestPayment(pay)
       // 显示支付状态
-      await showToast({ title: '支付成功'})
+      await showToast({ title: '支付成功' })
     } catch(error) {
       console.log(error)
-      await showToast({ title: '支付失败'})
+      await showToast({ title: '支付失败' })
     }
   }
 })

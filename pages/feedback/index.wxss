@@ -1,1 +1,63 @@
-/* pages/feedback/index.wxss */
+page {
+  background-color: #eeeeee;
+}
+.feedback_main {
+  padding: 20rpx;
+  color: #666;
+}
+.feedback_main .feedback_tips {
+  display: flex;
+  flex-wrap: wrap;
+}
+.feedback_main .feedback_tips text {
+  width: 30%;
+  padding: 10rpx;
+  text-align: center;
+  background-color: #ffffff;
+  margin: 20rpx 10rpx;
+}
+.feedback_main .feedback_content {
+  background-color: #ffffff;
+  margin-top: 20rpx;
+}
+.feedback_main .feedback_content textarea {
+  padding: 10rpx;
+}
+.feedback_main .feedback_content .feedback_tool {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20rpx;
+}
+.feedback_main .feedback_content .feedback_tool button {
+  padding: 0;
+  margin: 0;
+  width: 90rpx;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  color: #ccc;
+  font-size: 60rpx;
+}
+.feedback_main .feedback_content .feedback_tool .up_img_item {
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.feedback_main .feedback_btn_wrap {
+  display: flex;
+  margin-top: 20rpx;
+  justify-content: flex-end;
+}
+.feedback_main .feedback_btn_wrap button {
+  margin: 0;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+}
+.feedback_main .feedback_btn_wrap button icon {
+  padding-right: 10rpx;
+}

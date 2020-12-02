@@ -117,6 +117,12 @@
         {
           "name": "搜索页面",
           "pathName": "pages/search/index",
+          "scene": null,
+          "query": ""
+        },
+        {
+          "name": "意见反馈页面",
+          "pathName": "pages/feedback/index",
           "scene": null
         }
       ]

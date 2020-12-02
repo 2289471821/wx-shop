@@ -24,9 +24,11 @@ Page({
       url: '/home/swiperdata',
       method: 'GET'
     })
-    this.setData({
-      swiperList: res.message
+    const swiperList = res.message
+    swiperList.map(v => {
+      v.navigator_url = v.navigator_url.replace('main', 'index')
     })
+    this.setData({ swiperList })
   },
 
   // 获取分类导航数据
